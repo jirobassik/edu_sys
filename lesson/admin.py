@@ -4,7 +4,7 @@ from lesson.models import Lesson, LessonStatus
 
 @admin.register(LessonStatus)
 class LessonStatusAdmin(admin.ModelAdmin):
-    list_display = ('id_lesson', 'id_user', 'time_view', 'get_status')
+    list_display = ('id_lesson', 'id_user', 'time_view', 'view_date', 'get_status')
 
     def get_status(self, obj):
         return obj.status
